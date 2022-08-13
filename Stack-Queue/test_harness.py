@@ -36,7 +36,7 @@ while harness != 'quit':
         quit\tTo quit stack test
         ''')
 
-        s1 = DSAStack()
+        s1 = Stack()
 
         option = None
 
@@ -72,20 +72,7 @@ while harness != 'quit':
                 
     elif harness == 'queue':
         print('\n# ---------------------------- Queue Harness ---------------------------- #')
-        print('''
-        Type:
-        s\tTo use shuffling queue
-        c\tTo use circular queue
-        ''')
-        
-        option1 = None
-        while option1 != 's' and option1 != 'c':
-            option1 = input('Enter queue type: ').lower()
-            
-        if option1 == 's':
-            q1 = DSAShufflingQueue()
-        else:
-            q1 = DSACircularQueue()
+        q1 = Queue()
         
         print('''
         Type:
