@@ -1,14 +1,12 @@
 # 
-# Author --------- Shuber Ali Mirza
-# linked_list.py - Contains code for double ended, doubly linked list
-# Created -------- 4/FEB/2021
-# Last Updated --- 6/FEB/2021
+# Author ------- Shuber Ali Mirza
+# Created ------ 4/FEB/2021
+# Last Updated - 6/FEB/2021
 # 
 
 # Reference: https://stackabuse.com/doubly-linked-list-with-python-examples/
 
-class DSAListNode():
-    
+class ListNode():
     def __init__(self , value):
         self.value = value
         self.next = None
@@ -33,11 +31,11 @@ class DSAListNode():
         self.prev = newPrev
 
 
-class DSALinkedList(DSAListNode):
+class DSALinkedList(ListNode):
     
     def __init__(self):
-        self.head = DSAListNode(None)
-        self.tail = DSAListNode(None)
+        self.head = ListNode(None)
+        self.tail = ListNode(None)
         
     def isEmpty(self):
         empty = None
@@ -59,7 +57,7 @@ class DSALinkedList(DSAListNode):
         if self.isEmpty() == True:
             self.insertEmpty(inValue)
         else:
-            new = DSAListNode(inValue)
+            new = ListNode(inValue)
             new.setNext(self.head)
             self.head.setPrev(new)
             self.head = new
@@ -69,7 +67,7 @@ class DSALinkedList(DSAListNode):
         if self.isEmpty() == True:
             self.insertEmpty(inValue)
         else:
-            new = DSAListNode(inValue)
+            new = ListNode(inValue)
             new.setPrev(self.tail)
             self.tail.setNext(new)
             self.tail = new
