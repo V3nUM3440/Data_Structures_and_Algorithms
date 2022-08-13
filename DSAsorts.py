@@ -1,9 +1,3 @@
-#
-# Data Structures and Algorithms COMP1002
-#
-# Python file to hold all sorting methods
-#
-
 # Author ------- Shuber Ali Mirza
 # Last Updated - 14/JAN/2021
 
@@ -33,27 +27,4 @@ def selectionSort(A):
         temp = A[minIdx]
         A[minIdx] = A[nn]
         A[nn] = temp
-
-def mergeSort(A):
-    """ mergeSort - front-end for kick-starting the recursive algorithm
-    """
-    ...
-
-def mergeSortRecurse(A, leftIdx, rightIdx):
-    ...
-
-def merge(A, leftIdx, midIdx, rightIdx):
-    ...
-
-def quickSort(A):
-    """ quickSort - front-end for kick-starting the recursive algorithm
-    """
-    ...
-
-def quickSortRecurse(A, leftIdx, rightIdx):
-    ...
-
-def doPartitioning(A, leftIdx, rightIdx, pivotIdx):
-    ...
-
 
