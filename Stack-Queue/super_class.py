@@ -5,7 +5,7 @@
 #
 
 import numpy as np
-from linked_list import *
+from ../LinkedList/linked_list import *
 
 class SUPER():
     DEFAULT_CAPACITY = 100
