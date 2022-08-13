@@ -28,7 +28,7 @@ CSV\tTo read and write to a csv file
 Q\tTo quit test harness
 ''')
 
-user = DSABST()
+user = BST()
 
 option = None
 
