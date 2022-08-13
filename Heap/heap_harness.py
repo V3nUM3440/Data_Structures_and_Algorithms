@@ -11,7 +11,7 @@ import pickle, sys
 print('\n# ------------------------- Heap Harness ------------------------- #')
 
 size = int(input('Enter heap size (10 by default): '))
-user = DSAHeap(size)
+user = Heap(size)
 
 print('''
 Type:
