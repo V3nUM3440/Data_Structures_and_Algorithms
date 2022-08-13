@@ -1,6 +1,5 @@
 #
 # Author ------- Shuber Ali Mirza
-# queue.py ----- Contains DSAQueues, DSAShufflingQueue and DSACircularQueue classes, performs basic functions of queue ADT
 # Created ------ 28/JAN/2021
 # Last Updated - 29/JAN/2021
 #
