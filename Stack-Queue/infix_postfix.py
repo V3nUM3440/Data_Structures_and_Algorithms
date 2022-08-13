@@ -9,7 +9,7 @@
 
 from stack import *
 
-class EQNSolver(DSAStack):
+class EQNSolver(Stack):
     precedence = {'+':1, '-':1, '*':2, '/':2, '^':3}
     
     def isOperand(self, ch):
