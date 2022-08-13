@@ -7,10 +7,10 @@
 
 import numpy as np
 from math import *
-from linked_list import *
+from ../LinkedList/linked_list import *
 
 
-class DSAHashEntry():
+class HashEntry():
     def __init__(self, key, value):
         self.key = key
         self.value = value
@@ -18,13 +18,13 @@ class DSAHashEntry():
     def __str__(self):
         return 'Key: ' + self.key + '  Value: ' + str(self.value)
 
-class DSAHashTable(DSAHashEntry):
+class HashTable(HashEntry):
     def __init__(self, size=11):
         self.size = size
         self.count = 0
         self.table = np.zeros(self.size, dtype=object)
         for i in range(self.size):
-            self.table[i] = DSALinkedList()
+            self.table[i] = LinkedList()
     
     def _hashFunc(self, key):
         keyASCII = 0
@@ -39,7 +39,7 @@ class DSAHashTable(DSAHashEntry):
         length = self.size - length
         new = np.zeros(length, dtype=object)
         for i in range(length):
-            new[i] = DSALinkedList()
+            new[i] = LinkedList()
         self.table = np.append(self.table, new)
         
         for index in self.table:
@@ -70,7 +70,7 @@ class DSAHashTable(DSAHashEntry):
         return primeVal
     
     def _putAfterResize(self, key, val):
-        new = DSAHashEntry(key, val)
+        new = HashEntry(key, val)
         index = self._hashFunc(key)
         while (self.count / self.size > 0.7):
             self.resize()
@@ -79,7 +79,7 @@ class DSAHashTable(DSAHashEntry):
     
     def put(self, key, val):
         if self.hasKey(key) == False:
-            new = DSAHashEntry(key, val)
+            new = HashEntry(key, val)
             index = self._hashFunc(key)
             while (self.count / self.size > 0.7):
                 self.resize()
