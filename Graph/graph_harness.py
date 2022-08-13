@@ -22,9 +22,9 @@ user = None
 while direct == None:
     direct = input('Enter option: ').lower()
     if direct == 'd':    
-        user = DSAGraph(True)
+        user = Graph(True)
     elif direct == 'u':
-        user = DSAGraph(False)
+        user = Graph(False)
     else:
         direct = None
         print('ERROR - Unknown option')
