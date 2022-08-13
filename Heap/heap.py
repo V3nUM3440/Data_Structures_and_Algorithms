@@ -7,7 +7,7 @@
 
 import numpy as np
 
-class DSAHeapEntry():
+class HeapEntry():
     def __init__(self, inPriority, inValue):
         self.priority = inPriority
         self.value = inValue
@@ -15,7 +15,7 @@ class DSAHeapEntry():
     def __str__(self):
         return 'Priority: '+ str(self.priority) + '\tValue: ' + str(self.value)
 
-class DSAHeap(DSAHeapEntry):
+class Heap(HeapEntry):
     def __init__(self, maxSize=10):
         self.maxSize = maxSize
         self.count = 0
@@ -45,7 +45,7 @@ class DSAHeap(DSAHeapEntry):
                 self._trickleDown(large, num)
                 
     def add(self, priority, value):
-        new = DSAHeapEntry(priority, value)
+        new = HeapEntry(priority, value)
         self.heap[self.count] = new
         self._trickleUp(self.count)
         self.count += 1
