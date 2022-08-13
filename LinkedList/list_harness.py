@@ -1,8 +1,7 @@
 # 
-# Author ---------- Shuber Ali Mirza
-# list_harness.py - Test harness for linked list, and for serialization
-# Created --------- 5/FEB/2021
-# Last Updated ---- 7/FEB/2021
+# Author ------- Shuber Ali Mirza
+# Created ------ 5/FEB/2021
+# Last Updated - 7/FEB/2021
 # 
 
 from linked_list import *
@@ -24,7 +23,7 @@ PK\tTo manipulate list with pickle
 Q\tTo quit test harness
 ''')
 
-user = DSALinkedList()
+user = LinkedList()
 
 option = None
 
