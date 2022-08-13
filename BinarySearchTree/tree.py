@@ -18,7 +18,7 @@ class TreeNode():
     def __str__(self):
         return ("Key: " + str(self.key) + " Value: "+ str(self.value))
     
-class DSABST(TreeNode):
+class BST(TreeNode):
     
     def __init__(self):
         self.root = None
