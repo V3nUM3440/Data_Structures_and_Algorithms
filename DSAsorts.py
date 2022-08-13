@@ -1,9 +1,3 @@
-#
-# Data Structures and Algorithms COMP1002
-#
-# Python file to hold all sorting methods
-#
-
 # Author ------- Shuber Ali Mirza
 # Last Updated - 14/MAR/2021
 
@@ -42,23 +36,14 @@ def selectionSort(A):
 
 # Reference: https://www.youtube.com/watch?v=3aTfQvs-_hA&ab_channel=BrianFaure
 def mergeSort(A):
-#     mergeSortRecurse(A, 0, len(A) - 1)
     mergeSortRecurse(A)
 
 def mergeSortRecurse(A):
-# def mergeSortRecurse(A, l, r):
     if len(A)<=1: return A
     left,right = mergeSortRecurse(A[:int(len(A)/2)]), mergeSortRecurse(A[int(len(A)/2):])
     return merge(left, right)
-#     if l < r:
-#         m = int((l + r) / 2)
-#         mergeSortRecurse(A, l, m)
-#         mergeSortRecurse(A, m, r)
-#         merge(A, l, m, r)
-#     return A
 
 def merge(l, r):
-# def merge(A, l, m, r):
     temp = []
     a,b = 0,0
     while a < len(l) and b < len(r):
@@ -73,33 +58,6 @@ def merge(l, r):
     else:
         temp.extend(l[a:])
     return temp
-#     temp = np.zeros(r-l+1, dtype=int)
-#     ii = l
-#     jj = m + 1
-#     kk = 0
-#     while (ii <= m) and (jj <= r):
-#         if A[ii] <= A[jj]:
-#             temp[kk] = A[ii]
-#             ii += 1
-#         else:
-#             temp[kk] = A[jj]
-#             jj += 1
-#         kk += 1
-#     i = ii
-#     while i != m:
-#         temp[kk] = A[i]
-#         kk += 1
-#         i += 1
-#     j = jj
-#     while j != r:
-#         temp[kk] = A[j]
-#         kk += 1
-#         j += 1
-#     k = l
-#     while k != r:
-#         A[k] = temp[k - l]
-#         k += 1
-#     return A
 
 def quickSort(A, pivType):
     """ quickSort - front-end for kick-starting the recursive algorithm
@@ -146,12 +104,6 @@ def doPartitioning(A, leftIdx, rightIdx, pivot):
     A[pivot] = A[rightIdx]
     A[rightIdx] = pivotV
     cur = leftIdx
-#     for i in range(leftIdx, rightIdx - 1):
-#         if A[i] < pivotV:
-#             temp = A[i]
-#             A[i] = A[cur]
-#             A[cur] = temp
-#             cur += 1
     ii = leftIdx
     while ii != rightIdx:
         if A[ii] < pivotV:
