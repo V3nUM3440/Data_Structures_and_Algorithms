@@ -31,7 +31,7 @@ class ListNode():
         self.prev = newPrev
 
 
-class DSALinkedList(ListNode):
+class LinkedList(ListNode):
     
     def __init__(self):
         self.head = ListNode(None)
