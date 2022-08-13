@@ -7,7 +7,7 @@
 
 from super_class import *
 
-class DSAStack(DSAADS):
+class Stack(SUPER):
     def push(self , x):
         try:
             if self.isFull() == True:
