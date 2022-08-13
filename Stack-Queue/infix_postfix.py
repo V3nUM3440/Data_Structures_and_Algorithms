@@ -1,8 +1,7 @@
 #
-# Author ----------- Shuber Ali Mirza
-# infix_postfix.py - Converts expressions from infix to postfix
-# Created ---------- 29/JAN/2021
-# Last Updated ----- 31/JAN/2021
+# Author ------- Shuber Ali Mirza
+# Created ------ 29/JAN/2021
+# Last Updated - 31/JAN/2021
 #
 
 # Reference 1: https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
