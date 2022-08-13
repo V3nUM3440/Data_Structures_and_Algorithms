@@ -5,8 +5,8 @@
 # Last Updated - 22/FEB/2021
 #
 
-from linked_list import *
-from queue import *
+from ../LinkedList/linked_list import *
+from ../Stack-Queue/queue import *
 import numpy as np
 
 class EmptyError(RuntimeError):
@@ -14,15 +14,15 @@ class EmptyError(RuntimeError):
         self.args = arg
 
 
-class DSAGraphVertex(DSAListNode):
+class GraphVertex(ListNode):
     def __init__(self, label, value):
         self.label = label
         self.value = value
-        self.links = DSALinkedList()
+        self.links = LinkedList()
         self.visited = None
             
     def addLink(self, vertex):
-        self.links.insertLast(DSAListNode(vertex.label))
+        self.links.insertLast(ListNode(vertex.label))
         self.links.peekLast().setNext(vertex)
     
     def getLinks(self):
@@ -37,10 +37,10 @@ class DSAGraphVertex(DSAListNode):
         return ('Label: ' + str(self.label) + ' Value: ' + str(self.value))
 
 
-class DSAGraph(DSAGraphVertex):
+class Graph(GraphVertex):
     
     def __init__(self, directed):
-        self.vertices = DSALinkedList()
+        self.vertices = LinkedList()
         self.directed = directed
     
     def isEmpty(self):
@@ -56,7 +56,7 @@ class DSAGraph(DSAGraphVertex):
                 if i != None:
                     if i.label == label:
                         raise Exception
-            self.vertices.insertLast(DSAGraphVertex(label, value))
+            self.vertices.insertLast(GraphVertex(label, value))
         except Exception:
             print('ERROR - Label already exists')
         
@@ -214,7 +214,7 @@ class DSAGraph(DSAGraphVertex):
         try:
             if self.isEmpty():
                 raise EmptyError('')
-            q = DSAQueue()
+            q = Queue()
             BFS = ''
             for i in self.vertices:
                 BFS += i.label
