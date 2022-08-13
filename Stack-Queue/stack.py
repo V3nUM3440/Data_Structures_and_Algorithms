@@ -1,6 +1,6 @@
 #
 # Author ------- Shuber Ali Mirza
-# stack.py ----- Contains DSAStack class, uses linked list
+# stack.py ----- Contains Stack class, uses linked list
 # Created ------ 28/JAN/2021
 # Last Updated - 6/FEB/2021
 #
