@@ -1,13 +1,12 @@
 #
-# Author ----------- Shuber Ali Mirza
-# super_class.py --- Contains super class for DSAStacks and DSAQueues subclasses
-# Created ---------- 28/JAN/2021
-# Last Updated ----- 28/JAN/2021
+# Author ------- Shuber Ali Mirza
+# Created ------ 28/JAN/2021
+# Last Updated - 28/JAN/2021
 #
 
 import numpy as np
 
-class DSAADS():
+class SUPER():
     DEFAULT_CAPACITY = 100
     
     def __init__(self):
