@@ -10,7 +10,7 @@ import pickle, sys, os
 
 print('\n# ------------------------- Hash Harness ------------------------- #')
 
-user = DSAHashTable()
+user = HashTable()
 
 print('''
 Type:
