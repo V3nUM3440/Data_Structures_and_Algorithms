@@ -1,6 +1,5 @@
 # 
 # Author ------- Shuber Ali Mirza
-# tree.py ------ Contains class for binary search tree
 # Created ------ 11/FEB/2021
 # Last Updated - 14/FEB/2021
 # 
@@ -8,7 +7,7 @@
 # Reference 1: https://stackoverflow.com/questions/2598437/how-to-implement-a-binary-tree
 # Reference 2: https://stackoverflow.com/questions/12879903/binary-tree-counting-nodes-on-a-level
 
-class DSATreeNode():
+class TreeNode():
     
     def __init__(self , inKey , inValue):
         self.key = inKey
@@ -19,7 +18,7 @@ class DSATreeNode():
     def __str__(self):
         return ("Key: " + str(self.key) + " Value: "+ str(self.value))
     
-class DSABST(DSATreeNode):
+class DSABST(TreeNode):
     
     def __init__(self):
         self.root = None
@@ -49,7 +48,7 @@ class DSABST(DSATreeNode):
     def insert(self , key , value):
         try:
             if self.root == None:
-                self.root = DSATreeNode(key , value)
+                self.root = TreeNode(key , value)
                 print('ROOT node ADDED with key' , key)
             else:
                 self._insertRec(key , value , self.root)
@@ -64,13 +63,13 @@ class DSABST(DSATreeNode):
                 if cur.left != None:
                     self._insertRec(key , value , cur.left)
                 else:
-                    cur.left = DSATreeNode(key , value)
+                    cur.left = TreeNode(key , value)
                     print('Node with key' , key , 'ADDED')
             else:
                 if cur.right != None:
                     self._insertRec(key , value , cur.right)
                 else:
-                    cur.right = DSATreeNode(key , value)
+                    cur.right = TreeNode(key , value)
                     print('Node with key' , key , 'ADDED')
         except Exception:
             print('ERROR - Node with key '+key+' already present')
