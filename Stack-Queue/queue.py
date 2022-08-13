@@ -7,7 +7,7 @@
 
 from super_class import *
 
-class DSAQueue(DSAADS):
+class Queue(SUPER):
     def enqueue(self , v):
         try:
             if self.isFull() == True:
@@ -37,9 +37,3 @@ class DSAQueue(DSAADS):
         except Exception:
             print('ERROR - Queue is empty')
         return frontVal
-    
-class DSAShufflingQueue(DSAQueue):
-    pass
-
-class DSACircularQueue(DSAQueue):
-    pass
