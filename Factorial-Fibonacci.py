@@ -1,6 +1,5 @@
 #
 # Author -------- Shuber Ali Mirza
-# Activity_1.py - Contains solution for activity 1
 # Created ------- 20/JAN/2021
 # Last Updated -- 21/JAN/2021
 #
